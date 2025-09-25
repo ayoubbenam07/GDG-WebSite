@@ -1,16 +1,16 @@
 function Navbar(){
     return(
     <>
-    <div className="absolute w-1/1 px-[80px] mx-auto h-[68px] bg-white/80 flex justify-between items-center font-pt">
+    <div className="z-10 absolute w-1/1 px-[80px] mx-auto h-[68px] bg-white/80 flex justify-between items-center font-pt">
         <div className="flex gap-2 items-center">
             <div className="w-[60px] h-[37px]">
                 <img src="images\GDG-Logo.svg" alt="" />
             </div>
-            <p className="font-pt text-[16px]">
+            <p className="font-pt text-sm">
                 Google Developer Group <span  className="font-bold">ENSIA</span>
             </p>
         </div>
-        <div className="flex gap-[40px] items-center text-xl font-medium">
+        <div className="flex gap-[40px] items-center text-md font-medium">
             <a href="">Home</a>
             <a href="">Events</a>
             <a href="">About</a>
