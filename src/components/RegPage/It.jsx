@@ -13,7 +13,7 @@ function It(){
         <>
         <div className="form">
             <p className="self-start text-xl">IT</p>
-            <form action="" className="flex flex-col justify-between w-full gap-2">
+            <form id="RegestrationForm" className="flex flex-col justify-between w-full gap-2">
                 <p className="labelText">Which tech topics are you most excited to learn or contribute to?</p>
                 <div className="flex md:gap-40 md:flex-row flex-col">
                     <div>

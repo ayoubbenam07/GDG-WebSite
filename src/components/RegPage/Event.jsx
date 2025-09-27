@@ -13,7 +13,7 @@ function Event(){
         <>
         <div className="form">
             <p className="self-start text-xl">Event</p>
-            <form action="" className="flex flex-col justify-between gap-2">
+            <form id="RegestrationForm" className="flex flex-col justify-between gap-2">
                 <label required htmlFor="" className="labelText">Have you ever helped organize an event? If yes, describe your role.</label>
                 <textarea ref={textarea1Ref} onInput={() => handleInput(textarea1Ref)} type="text" placeholder="Explain..." className="input"/><br />
                 <p className="labelText">Are you familiar with planning, cost estimation, and logistics management?</p>

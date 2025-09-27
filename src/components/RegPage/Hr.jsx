@@ -14,7 +14,7 @@ function Hr(){
         <>
         <div className="form">
             <p className="self-start text-xl">HR</p>
-            <form action="" className="flex flex-col justify-between gap-2">
+            <form id="RegestrationForm" className="flex flex-col justify-between gap-2">
                 <label htmlFor="" className="labelText">What skills do you think are essential for people management?</label>
                 <textarea required ref={textarea1Ref} onInput={() => handleInput(textarea1Ref)} type="text" placeholder="Explain..." className="input"/><br />
                 <label htmlFor="" className="labelText">How would you help keep members motivated and engaged?</label>

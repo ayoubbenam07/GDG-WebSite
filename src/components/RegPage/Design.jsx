@@ -13,7 +13,7 @@ function Design(){
         <>
         <div className="form">
             <p className="self-start text-xl">Design</p>
-            <form action="" className="flex flex-col justify-between w-full gap-2">
+            <form id="RegestrationForm" className="flex flex-col justify-between w-full gap-2">
                 <p className="labelText">Which tools have you used for design?</p>
                 <div className="flex md:gap-40 md:flex-row flex-col">
                     <div>

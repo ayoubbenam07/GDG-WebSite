@@ -13,7 +13,7 @@ function Marketing(){
         <>
         <div className="form">
             <p className="self-start text-xl">Marketing</p>
-            <form action="" className="flex flex-col justify-between gap-2">
+            <form id="RegestrationForm" className="flex flex-col justify-between gap-2">
                 <label required htmlFor="" className="labelText">Do you have experience in social media management, promotion, branding, or marketing? talk about it.</label>
                 <textarea ref={textarea1Ref} onInput={() => handleInput(textarea1Ref)} type="text" placeholder="Explain..." className="input"/><br />
                 <label required htmlFor="" className="labelText">Imagine we have an event happening next 2 week, but our posts on social media aren’t getting much attention (very few likes, comments, or shares). As part of the marketing team, what would you do to improve engagement and attract more people?</label>

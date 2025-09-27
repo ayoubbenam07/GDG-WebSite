@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Stepper({steps}) {
+function Stepper({steps, isGrey}) {
   // const steps = [2, 4, 6, 8, 10]; // step options
     const [selectedStep, setselectedStep] = useState(steps[0]);
 
@@ -16,7 +16,7 @@ function Stepper({steps}) {
             left: 0,
             width: "100%",
             height: "12px", // thicker base line
-            background: "#ffffff",
+            background: isGrey ? "#f2f2f2" : "#ffffff",
             borderRadius: "6px",
             transform: "translateY(-50%)", // centers line with circles
             zIndex: 1,
@@ -67,7 +67,7 @@ function Stepper({steps}) {
                     width: "36px",
                     height: "36px",
                     borderRadius: "50%",
-                    background: isActive ? "#4285F3" : "#ffffff",
+                    background: isActive ? "#4285F3" : isGrey ? "#f2f2f2" : "#ffffff",
                     color: "white",
                     display: "flex",
                     alignItems: "center",
