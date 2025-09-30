@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-function It(){
+function It({data, onChange, handleCheckBox}){
     let rank = 1;
     const textarea1Ref = useRef(null);
     const textarea2Ref = useRef(null);
@@ -13,54 +13,54 @@ function It(){
         <>
         <div className="form">
             <p className="self-start text-xl">IT</p>
-            <form id="RegestrationForm" className="flex flex-col justify-between w-full gap-2">
+            <div id="RegestrationForm" className="flex flex-col justify-between w-full gap-2">
                 <p className="labelText">Which tech topics are you most excited to learn or contribute to?</p>
                 <div className="flex md:gap-40 md:flex-row flex-col">
                     <div>
                         <div className="checkBoxContainer">
-                            <input type="checkbox" value="WebDevelopment" className="checkBox"/>
+                            <input type="checkbox" value="WebDevelopment" className="checkBox"  checked={data.Q1?.includes("WebDevelopment")} onChange={(e) => handleCheckBox("Q1", e.target.value, e.target.checked)}/>
                             <label for="WebDevelopment" className="labelText">Web Development</label>
                         </div>
                         <div className="checkBoxContainer">
-                            <input type="checkbox" value="Cybersecurity" className="checkBox"/>
+                            <input type="checkbox" value="Cybersecurity" className="checkBox" checked={data.Q1?.includes("Cybersecurity")} onChange={(e) => handleCheckBox("Q1", e.target.value, e.target.checked)}/>
                             <label for="Cybersecurity" className="labelText">Cybersecurity</label>
                         </div>
                         <div className="checkBoxContainer">
-                            <input type="checkbox" value="AI" className="checkBox"/>
+                            <input type="checkbox" value="AI" className="checkBox" checked={data.Q1?.includes("AI")} onChange={(e) => handleCheckBox("Q1", e.target.value, e.target.checked)}/>
                             <label for="AI" className="labelText">AI</label>
                         </div>
                     </div>
                     <div>
                         <div className="checkBoxContainer">
-                            <input type="checkbox" value="MobileDevelopment" className="checkBox"/>
+                            <input type="checkbox" value="MobileDevelopment" className="checkBox" checked={data.Q1?.includes("MobileDevelopment")} onChange={(e) => handleCheckBox("Q1", e.target.value, e.target.checked)}/>
                             <label for="MobileDevelopment" className="labelText">Mobile Development</label>
                         </div>
                         <div className="checkBoxContainer">
-                            <input type="checkbox" value="Robotics" className="checkBox"/>
+                            <input type="checkbox" value="Robotics" className="checkBox" checked={data.Q1?.includes("Robotics")} onChange={(e) => handleCheckBox("Q1", e.target.value, e.target.checked)}/>
                             <label for="Robotics" className="labelText">Robotics</label>
                         </div>
                     </div>
                 </div>
                 <label required htmlFor="" className="labelText">Do you have experience in these topics? if yes, describe briefly.</label>
-                <textarea ref={textarea1Ref} onInput={() => handleInput(textarea1Ref)} type="text" placeholder="Explain..." className="input"/><br />
+                <textarea value={data.Q2} onChange={(e) => onChange("Q2", e.target.value)} ref={textarea1Ref} onInput={() => handleInput(textarea1Ref)} type="text" placeholder="Explain..." className="input"/><br />
                 <label className="labelText">Upload links to your projects (Github, Kaggle, HackTheBox, TryHackMe, ...etc)</label>
-                <textarea ref={textarea2Ref} onInput={() => handleInput(textarea2Ref)} type="text" className="bg-white rounded-[40px] px-8 py-6 text-3xl overflow-hidden"/>
+                <textarea value={data.Q3} onChange={(e) => onChange("Q3", e.target.value)} ref={textarea2Ref} onInput={() => handleInput(textarea2Ref)} type="text" className="bg-white rounded-[40px] px-8 py-6 text-3xl overflow-hidden"/>
                 <p className="text-[#4285F3] text-md ">https://exampleofalink.com</p>
                 <p className="text-[#4285F3] text-md">https://anotherexampleofalink.com</p><br />
                 <p className="labelText">Suppose we have an event in 2 months requiring a website, app, challenge or a system. Would you be able to contribute?</p>
                 <div className="flex items-center justify-between w-8/10">
                     <label required htmlFor="" className="labelText flex items-center gap-5">
-                    <input type="radio" name="Q4" value="Yes" className="checkBox"/>Yes
+                    <input type="radio" name="Q4" value="Yes" className="checkBox" checked={data.Q4 === "Yes"} onChange={(e) => onChange("Q4", e.target.value)}/>Yes
                     </label>
                     <label required htmlFor="" className="labelText flex items-center gap-5">
-                    <input type="radio" name="Q4" value="Maybe" className="checkBox"/>Maybe
+                    <input type="radio" name="Q4" value="Maybe" className="checkBox" checked={data.Q4 === "Maybe"} onChange={(e) => onChange("Q4", e.target.value)}/>Maybe
                     </label>
                     <label required htmlFor="" className="labelText flex items-center gap-5">
-                    <input type="radio" name="Q4" value="No" className="checkBox"/>No
+                    <input type="radio" name="Q4" value="No" className="checkBox" checked={data.Q4 === "No"} onChange={(e) => onChange("Q4", e.target.value)}/>No
                     </label>
                 </div>
                 <br />
-            </form>
+            </div>
             <div className="rank">rank <span className="text-[#E94335]">#{rank}</span></div>
         </div>
         </>

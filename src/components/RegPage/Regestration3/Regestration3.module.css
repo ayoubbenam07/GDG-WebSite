@@ -1,0 +1,137 @@
+.table {
+  align-self: center;
+  justify-self: center;
+  border-radius: 2rem;
+  overflow: hidden;
+  font-size: clamp(0.8rem, calc(0.6rem + 0.8vw), 1.25rem);
+  color: #737373;
+}
+.depContainer {
+  padding: 1.5rem 0.5rem;
+  background-color: #f2f2f2;
+}
+
+.kk:first-child .depContainer {
+  border-top-left-radius: 2rem;
+}
+
+.rankContainer {
+  background-color: #f2f2f2;
+  padding: 0.5rem 0rem;
+}
+.depContainer div {
+  background-color: #fff;
+  padding: 0.5rem 2rem;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.checkContainer {
+  background-color: #f2f2f2;
+  padding: 2rem;
+}
+
+.ldummy {
+  position: relative;
+  background-color: white;
+  border-bottom-right-radius: 1rem;
+}
+
+.ldummy::after {
+  content: "";
+  position: absolute;
+  background-color: #f2f2f2;
+  height: 100%;
+  width: 50%;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+table,
+th,
+td {
+  border: none;
+  border-collapse: collapse;
+}
+
+.rightDummy {
+  padding: 1rem;
+  background-color: #f2f2f2;
+}
+.kk:first-child .rightDummy {
+  border-top-right-radius: 1rem;
+}
+
+thead tr th:nth-child(2) {
+  border-top-left-radius: 1rem;
+}
+
+thead tr th:nth-child(7) {
+  border-top-right-radius: 1rem;
+}
+
+.rdummy {
+  background-color: #fff;
+  position: relative;
+  border-bottom-left-radius: 1rem;
+}
+
+.rdummy::after {
+  content: "";
+  position: absolute;
+  background-color: #f2f2f2;
+  height: 100%;
+  width: 50%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+input[type="radio"] {
+  accent-color: var(--greenColor);
+  transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+  .checkContainer {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .checkContainer {
+    padding: 1rem;
+  }
+
+  .depContainer div {
+    padding: 0.5rem 1rem;
+  }
+
+  .rightDummy {
+    padding: 0.5rem;
+  }
+
+  .kk:first-child .rightDummy {
+    border-top-right-radius: 0.5rem;
+  }
+
+  .rdummy {
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  input[type="radio"] {
+    accent-color: var(--greenColor);
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 450px) {
+  .checkContainer {
+    padding: 0.7rem;
+  }
+
+  .depContainer {
+    padding: 1rem 0.5rem;
+  }
+}

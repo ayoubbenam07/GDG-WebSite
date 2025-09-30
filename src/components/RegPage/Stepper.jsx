@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-function Stepper({steps, isGrey}) {
+function Stepper({steps, isGrey, selectedStep, setselectedStep}) {
   // const steps = [2, 4, 6, 8, 10]; // step options
-    const [selectedStep, setselectedStep] = useState(steps[0]);
-
     return (
     <div style={{ width: "100%", maxWidth: "500px", margin: "0px auto"}}>
       {/* Stepper container */}
@@ -105,7 +103,6 @@ function Stepper({steps, isGrey}) {
                 return (
                     
                         <div>{step}</div>
-                    
                 )
             })}
         </div>

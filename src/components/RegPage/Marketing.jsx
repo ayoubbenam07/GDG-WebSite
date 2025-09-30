@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-function Marketing(){
+function Marketing({data, onChange}){
     let rank = 1;
     const textarea1Ref = useRef(null);
     const textarea2Ref = useRef(null);
@@ -15,9 +15,9 @@ function Marketing(){
             <p className="self-start text-xl">Marketing</p>
             <form id="RegestrationForm" className="flex flex-col justify-between gap-2">
                 <label required htmlFor="" className="labelText">Do you have experience in social media management, promotion, branding, or marketing? talk about it.</label>
-                <textarea ref={textarea1Ref} onInput={() => handleInput(textarea1Ref)} type="text" placeholder="Explain..." className="input"/><br />
+                <textarea value={data.Q1} onChange={(e) => onChange("Q1", e.target.value)} ref={textarea1Ref} onInput={() => handleInput(textarea1Ref)} type="text" placeholder="Explain..." className="input"/><br />
                 <label required htmlFor="" className="labelText">Imagine we have an event happening next 2 week, but our posts on social media aren’t getting much attention (very few likes, comments, or shares). As part of the marketing team, what would you do to improve engagement and attract more people?</label>
-                <textarea ref={textarea2Ref} onInput={() => handleInput(textarea2Ref)}  type="text" placeholder="Explain..." className="input"/>
+                <textarea value={data.Q2} onChange={(e) => onChange("Q2", e.target.value)} ref={textarea2Ref} onInput={() => handleInput(textarea2Ref)}  type="text" placeholder="Explain..." className="input"/>
             </form>
             <div className="rank">rank <span className="text-[#E94335]">#{rank}</span></div>
         </div>
