@@ -100,6 +100,7 @@ export default function RegestrationPage(){
             "Content-Type": "application/json",
             },
         });*/
+        console.log(data);
         setIsSubmitted(true);
         } catch (error) {
             console.error("Error:", error);
@@ -169,7 +170,7 @@ export default function RegestrationPage(){
     }
     useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    }, [step]);
+    }, [step, isSubmitted]);
     const nextStep = () => {
     if (step === 0 && !validateStep1()) return; 
     if (step === 1 && !validateStep2()) return; 

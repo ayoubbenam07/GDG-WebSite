@@ -56,7 +56,7 @@ function Relax({data, onChange}){
     return(
         <>
         <div className="form">
-            <p className="self-start text-xl">Relax</p>
+            <p className="self-start text-xl">Relex</p>
             <form id="RegestrationForm" className="flex flex-col justify-between w-full gap-2">
                 <p className="labelText">Do you have experience in reaching and communicating with companies or professionals?</p>
                 <div className="flex items-center justify-between w-8/10">

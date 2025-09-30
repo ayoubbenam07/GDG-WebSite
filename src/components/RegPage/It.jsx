@@ -44,7 +44,7 @@ function It({data, onChange, handleCheckBox}){
                 <label required htmlFor="" className="labelText">Do you have experience in these topics? if yes, describe briefly.</label>
                 <textarea value={data.Q2} onChange={(e) => onChange("Q2", e.target.value)} ref={textarea1Ref} onInput={() => handleInput(textarea1Ref)} type="text" placeholder="Explain..." className="input"/><br />
                 <label className="labelText">Upload links to your projects (Github, Kaggle, HackTheBox, TryHackMe, ...etc)</label>
-                <textarea value={data.Q3} onChange={(e) => onChange("Q3", e.target.value)} ref={textarea2Ref} onInput={() => handleInput(textarea2Ref)} type="text" className="bg-white rounded-[40px] px-8 py-6 text-3xl overflow-hidden"/>
+                <textarea value={data.Q3} onChange={(e) => onChange("Q3", e.target.value)} ref={textarea2Ref} onInput={() => handleInput(textarea2Ref)} type="text" className="bg-white rounded-[20px] md:rounded-[40px] px-6 md:px-8 py-4 md:py-6 text-md overflow-hidden"/>
                 <p className="text-[#4285F3] text-md ">https://exampleofalink.com</p>
                 <p className="text-[#4285F3] text-md">https://anotherexampleofalink.com</p><br />
                 <p className="labelText">Suppose we have an event in 2 months requiring a website, app, challenge or a system. Would you be able to contribute?</p>

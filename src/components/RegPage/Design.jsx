@@ -44,7 +44,7 @@ function Design({data, onChange, handleCheckBox}){
                 <label required htmlFor="" className="labelText">Briefly describe your experience in design.</label>
                 <textarea ref={textarea1Ref} onInput={() => handleInput(textarea1Ref)} value={data.Q2} onChange={(e) => onChange("Q2", e.target.value)} type="text" placeholder="Explain..." className="input"/><br />
                 <label className="labelText">Upload samples of your past designs (optional)</label>
-                <textarea ref={textarea2Ref} onInput={() => handleInput(textarea2Ref)} value={data.Q3} onChange={(e) => onChange("Q3", e.target.value)}  type="text" className="bg-white rounded-[40px] px-8 py-6 text-3xl overflow-hidden"/>
+                <textarea ref={textarea2Ref} onInput={() => handleInput(textarea2Ref)} value={data.Q3} onChange={(e) => onChange("Q3", e.target.value)}  type="text" className="bg-white rounded-[20px] md:rounded-[40px] px-6 md:px-8 py-4 md:py-6 text-md overflow-hidden"/>
                 <p className="text-[#4285F3] text-md ">https://exampleofalink.com</p>
                 <p className="text-[#4285F3] text-md">https://anotherexampleofalink.com</p><br />
                 <p className="labelText">Can you handle all visual assets for an event on your own if needed?</p>
