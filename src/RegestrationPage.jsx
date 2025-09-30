@@ -167,11 +167,15 @@ export default function RegestrationPage(){
     setError(""); // clear error if valid
     return true;
     }
+    useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    }, [step]);
     const nextStep = () => {
     if (step === 0 && !validateStep1()) return; 
     if (step === 1 && !validateStep2()) return; 
     if (step === 2 && !validateStep3()) return; 
     setStep(step + 1);
+    
     };
     const prevStep = () => {
     if (step > 0) {
@@ -183,7 +187,7 @@ export default function RegestrationPage(){
 
         <div className="relative">
             <div className="bg-[#B8EEF8] w-full absolute top-0 left-0 z-0 p-6 md:p-12 font-pt">
-                <div className="text-xl mb-5 rounded-md border-2 md:border-4 bg-[#4285F3] w-fit mt-0 px-6 md:px-30 py-1 flex justify-center items-center">Join us !</div>
+                <div className="text-xl mb-5 rounded-3xl border-2 md:border-4 bg-[#4285F3] w-fit mt-0 px-6 md:px-30 py-1 flex justify-center items-center">Join us !</div>
                 <p className="text-lg mb-20">Register now to learn, connect and build amazing projects.</p>
                 <div className="flex flex-col w-fit absolute top-0 right-0">
                     <div className="flex">

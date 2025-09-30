@@ -8,7 +8,8 @@ function Regestration5(){
                 <p className="text-md max-w-[940px] text-center leading-tight mb-14">Your request is now pending approval from our team. We’ll notify you by email once it’s confirmed.</p>
                 <img src="/images/GDG-Logo-Grey.jpg" alt="" className="max-w-[600px] w-9/10 self-center"/>
             </div>
-        </>             
+            <div className="h-70"></div>
+        </>          
     );
 }
 
